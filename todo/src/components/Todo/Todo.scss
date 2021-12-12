@@ -1,0 +1,136 @@
+.content {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: #373737;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "add right"
+    "left right";  
+  padding: 0 0 0 76px;
+
+  .add {
+    height: 44px;
+    display: flex;
+    grid-area: add;
+    .input-add-todo {  
+      height: 40px;
+      width: 100%;
+      margin: 0 8px 0 0;
+      border-radius: 4px;
+      border: solid 1px #ececec;
+      background-color: #fff;
+    }
+    .btn-add {
+      font-family: OpenSans;
+      font-size: 14px;  
+      color: #fff;  
+      padding: 5px 12px;
+      border-radius: 4px;
+      background-color: #550dc9;
+    }
+  }
+
+  .left{
+    grid-area: left;
+    .total {
+      font-family: OpenSans;
+      font-size: 12px;  
+      color: #550dc9;
+      margin-top: 8px;
+    }
+    .total-todo {
+      font-family: OpenSans;
+      font-size: 16px;
+      font-weight: 600;  
+      text-align: left;
+      color: #373737;
+      margin-top: 16px;
+    }
+    .todo {
+      .nocomplited {
+        display: flex;
+        flex-direction: row;
+        padding: 16px 12px;
+        border-radius: 4px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+        .title-todo {
+          width: 100%;  
+        }
+        .change-todo{
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+        .check-todo{
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
+          background-image: url('../../img/chb-uncheked.png');
+          background-repeat: no-repeat;
+          border: 1px solid #ECECEC;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+        .btn-edit {
+          width: 20px;
+          height: 20px;
+          background-image: url('../../img/edit.png');
+        }
+        .btn-copy {
+          width: 20px;
+          height: 20px;
+          background-image: url('../../img/copy.png');
+        }
+        .btn-del {
+          width: 20px;
+          height: 20px;
+          background-image: url('../../img/delete.png');
+        } 
+      }
+    }
+    
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 64px;
+    grid-area: right;
+    .total-complited {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .complited {
+      display: flex;
+      flex-direction: row;
+      padding: 16px 12px;
+      border-radius: 4px;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      text-decoration-line: line-through;
+      color: #A3A3A3;
+      .btn-del {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../img/delete.png');
+      } 
+      .checked-todo {
+        min-width: 16px;
+        min-height: 16px;
+        margin-right: 8px;
+        background-image: url('../../img/chb-cheked.png');
+        background-repeat: no-repeat;   
+        box-sizing: border-box;
+        border-radius: 4px;
+      }      
+      .title-todo {
+        width: 100%;  
+      }
+    }
+  }
+}
+
